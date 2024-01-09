@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    /* Warna latar belakang seringkali putih atau abu-abu terang */
+    color: #333;
+    /* Warna teks gelap */
+
+}
+
+h1 {
+    font-size: 1.1em;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 3em ;
+}
+
+.darkmode {
+    margin-bottom: 20px;
+    display: flex;
+
+}
+
+button {
+    margin: 0px auto;
+    border: none;
+    background-color: rgb(57, 57, 58);
+    padding: 14px 16px;
+    color: #efefef;
+    border-radius: 2px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+button:hover {
+    
+    cursor: pointer;
+    transform: scale(1.04);
+    -webkit-transform: scale(1.04);
+    -moz-transform: scale(1.04);
+    -ms-transform: scale(1.04);
+    -o-transform: scale(1.04);
+    transition: all ease-in-out 0.3s;
+    -webkit-transition: all ease-in-out 0.3s;
+    -moz-transition: all ease-in-out 0.3s;
+    -ms-transition: all ease-in-out 0.3s;
+    -o-transition: all ease-in-out 0.3s;
+}
+
+col:hover {
+    transform: scale(1.04);
+    -webkit-transform: scale(1.04);
+    -moz-transform: scale(1.04);
+    -ms-transform: scale(1.04);
+    -o-transform: scale(1.04);
+    transition: all ease-in-out 0.3s;
+    -webkit-transition: all ease-in-out 0.3s;
+    -moz-transition: all ease-in-out 0.3s;
+    -ms-transition: all ease-in-out 0.3s;
+    -o-transition: all ease-in-out 0.3s;
+}
+
+.container {
+    margin: 3em auto;
+    max-width: 16em;
+    padding: 16px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.114), 0 1px 3px rgba(0, 0, 0, 0.08);
+
+}
+
+.cont {
+ 
+    padding: 20px;
+    border: 1px solid rgb(212, 212, 212);
+    margin: 12px auto;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+.dark-mode .container {
+    color: #333;
+}
+
+
+.dark-mode {
+    background-color: #333; /* Dark background */
+    color: #f4f4f4; /* Light text */
+}
+
+
+.dark-mode button {
+    background-color: #ffffff; /* Dark background for buttons */
+    color: #000000; /* Light text for buttons */
+}
+
+/* Add other dark mode styles as needed */
+
+.wrap-btn {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.col {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    /* padding: 10px; */
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+.wrap-btn>.col:hover{
+    color: blue;
+    border: 1px solid rgb(219, 219, 219);
+    transition: all ease-in-out 0.3s;
+    -webkit-transition: all ease-in-out 0.3s;
+    -moz-transition: all ease-in-out 0.3s;
+    -ms-transition: all ease-in-out 0.3s;
+    -o-transition: all ease-in-out 0.3s;
+}
+
+.console {
+    text-align: end;
+    margin: auto 12px;
+   
+}
+
+.zero {
+    grid-column: 1/3;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    gap:15px;
+    position: relative;
+    top: 3em;
+    text-align: center;
+}
+input{
+    padding: 10px 20px;
+    background: none; 
+     border: none;
+}
+
+.console {
+    text-align: end;
+    margin: auto 12px;
+    height: 50px; 
+    line-height: 50px; /* Center text vertically */
+    overflow: hidden; /* Hide overflow */
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/app/style.css" />
+    <title>Howl| Kalkulator</title>
+  </head>
+  <body>
+    <main>
+      <h1>Kalkulator ajaib</h1>
+
+      <div class="container">
+        <div class="cont">
+          <div class="console" id="display">0</div>
+        </div>
+        <div class="wrap-btn">
+          <div class="col zero">
+            <input
+              type="button"
+              value="hapus"
+              onclick="appendToDisplay('hapus')"
+            />
+          </div>
+          <div class="col">
+            <input type="button" value="%" onclick="appendToDisplay('%')" />
+          </div>
+          <div class="col">
+            <input type="button" value="/" onclick="appendToDisplay('/')" />
+          </div>
+          <div class="col">
+            <input type="button" value="1" onclick="appendToDisplay('1')" />
+          </div>
+          <div class="col">
+            <input type="button" value="2" onclick="appendToDisplay('2')" />
+          </div>
+          <div class="col">
+            <input type="button" value="3" onclick="appendToDisplay('3')" />
+          </div>
+          <div class="col">
+            <input type="button" value="X" onclick="appendToDisplay('x')" />
+          </div>
+          <div class="col">
+            <input type="button" value="4" onclick="appendToDisplay('4')" />
+          </div>
+          <div class="col">
+            <input type="button" value="5" onclick="appendToDisplay('5')" />
+          </div>
+          <div class="col">
+            <input type="button" value="6" onclick="appendToDisplay('6')" />
+          </div>
+          <div class="col">
+            <input type="button" value="-" onclick="appendToDisplay('-')" />
+          </div>
+          <div class="col">
+            <input type="button" value="7" onclick="appendToDisplay('7')" />
+          </div>
+          <div class="col">
+            <input type="button" value="8" onclick="appendToDisplay('8')" />
+          </div>
+          <div class="col">
+            <input type="button" value="9" onclick="appendToDisplay('9')" />
+          </div>
+          <div class="col">
+            <input type="button" value="+" onclick="appendToDisplay('+')" />
+          </div>
+          <div class="col zero">
+            <input type="button" value="0" onclick="appendToDisplay('0')" />
+          </div>
+          <div class="col">
+            <input type="button" value="." onclick="appendToDisplay('.')" />
+          </div>
+          <div class="col">
+            <input type="button" value="=" onclick="appendToDisplay('=')" />
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="darkmode">
+        <button id="darkModeButton" onclick="toggleDarkMode()">
+          <i class="fas fa-moon"></i> <!-- Default icon -->
+        </button>
+        
+        
+      </div>
+    </footer>
+    <script src="/app/js.js"></script>
+  </body>
+</html>
