@@ -132,4 +132,13 @@ span{
     .container{
         margin: 20px auto;
     }
+    .card{
+        width: 300px;
+    }
+    .title{
+        font-size: 24px;
+    }
+    .card-body{
+        margin: 12px;
+    }
   }
