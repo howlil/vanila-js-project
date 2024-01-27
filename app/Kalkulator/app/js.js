@@ -60,7 +60,7 @@ function calculate() {
             break;
         case '/':
             if (current === 0) {
-                alert("Division by zero is not allowed");
+                alert("Gabisa");
                 return;
             }
             result = prev / current;
@@ -81,21 +81,21 @@ updateDisplay();
 
 
 
-//dark mode
-function toggleDarkMode() {
-    const body = document.body;
-    const darkModeButton = document.getElementById('darkModeButton');
-    const icon = darkModeButton.querySelector('i');
+// //dark mode
+// function toggleDarkMode() {
+//     const body = document.body;
+//     const darkModeButton = document.getElementById('darkModeButton');
+//     const icon = darkModeButton.querySelector('i');
 
-    body.classList.toggle('dark-mode');
+//     body.classList.toggle('dark-mode');
 
-    if (icon.classList.contains('fa-moon')) {
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun'); // Switch to sun icon
-    } else {
-        icon.classList.remove('fa-sun');
-        icon.classList.add('fa-moon'); // Switch back to moon icon
-    }
-}
+//     if (icon.classList.contains('fa-moon')) {
+//         icon.classList.remove('fa-moon');
+//         icon.classList.add('fa-sun'); // Switch to sun icon
+//     } else {
+//         icon.classList.remove('fa-sun');
+//         icon.classList.add('fa-moon'); // Switch back to moon icon
+//     }
+// }
 
 
