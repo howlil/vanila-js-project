@@ -1,6 +1,7 @@
-import "./App.css";
+import "./style/App.css";
 import { useEffect,useState } from "react";
-import { getMovieList, searchMovie } from "./Api";
+import { getMovieList, searchMovie } from "./utils/Api";
+
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
   const PopulerMovieList = ()=>{
     return popularMovie.map((movie,i)=>{
       return(
+        
         <div className="movie-wrap" key={i}>
           <div  className="movie-image">
             <img className="img" src={`${process.env.REACT_APP_BASEIMGURL}/${movie.poster_path}`} alt="movie" />
@@ -24,7 +26,7 @@ function App() {
             <div className="movie-rate"> {movie.vote_average}</div>
           </div>
 
-      </div>
+        </div>
       )
     })
   }
@@ -42,6 +44,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+    
         <h1>LAYAR KACA 21</h1>
         <input
           type="search"
