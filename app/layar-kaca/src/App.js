@@ -30,10 +30,13 @@ function App() {
   }
 
   const search = async (q) => {
-    if (q.length > 3) {
+    if (q.length > 2) {
       const query = await searchMovie(q);
       setPM(query.results);
-    }
+    }else {
+    const result = await getMovieList();
+    setPM(result);
+  }
   };
   
   return (
