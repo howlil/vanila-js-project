@@ -11,6 +11,24 @@ function App() {
     })
   }, []);
 
+  const PopulerMovieList = ()=>{
+    return popularMovie.map((movie,i)=>{
+      return(
+        <div className="movie-wrap" key={i}>
+          <div  className="movie-image">
+            <img className="img" src={`${process.env.REACT_APP_BASEIMGURL}/${movie.poster_path}`} alt="movie" />
+          </div>
+          <div className="movie-body">
+            <div className="movie-title">{movie.title}</div>
+            <div className="movie-date"> {movie.release_date}</div>
+            <div className="movie-rate"> {movie.vote_average}</div>
+          </div>
+
+      </div>
+      )
+    })
+  }
+
   const search = (q) => {
     console.log(q);
   };
@@ -25,10 +43,7 @@ function App() {
           onChange={(target) => search(target.value)}
         />
         <div className="movie-container">
-          <div className="movie-wrap">
-            <div className="movie-title"> FILM</div>
-            <img src="#" alt="" />
-          </div>
+         <PopulerMovieList/>
         </div>
       </header>
     </div>
