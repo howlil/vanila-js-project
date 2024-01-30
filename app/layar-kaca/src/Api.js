@@ -1,23 +1,17 @@
 import axios from "axios";
 
+const apiKey = process.env.REACT_APP_APIKEY
+const baseUrl = process.env.REACT_APP_BASEURL
+
 export const getMovieList = async () => {
-    try {
-        const response = await axios.get(`${process.env.REACT_APP_BASEURL}/movie/popular`);
-        return response.data; // mengembalikan data dari respons
-    } catch (error) {
-        console.error('Error fetching movie list:', error);
-    }
+    const movie = await axios.get(`${baseUrl}/movie/popular?api_key=${apiKey}`);
+    return movie.data.results
 };
 
+
 export const searchMovie = async (query) => {
-    try {
-        const response = await axios.get(`${process.env.REACT_APP_BASEURL}/search/movie`, {
-            params: {
-                query: query
-            }
-        });
-        return response.data;
-    } catch (error) {
-        console.error('Error searching movie:', error);
-    }
+
+        const search = await axios.get(`${process.env.REACT_APP_BASEURL}/search/movie`);
+       console.log(search)
+  
 };

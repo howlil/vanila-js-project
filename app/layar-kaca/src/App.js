@@ -1,33 +1,35 @@
-import './App.css';
-import { useEffect } from 'react';
-import {getMovieList,searchMovie} from './Api'
+import "./App.css";
+import { useEffect,useState } from "react";
+import { getMovieList, searchMovie } from "./Api";
 
 function App() {
-  useEffect(()=>{
-    getMovieList().then(data=>{
-      console.log(data)
-    })
-  },[])
 
-  const search = (q)=>{
-  }
+  const [popularMovie,setPM] = useState([])
+  useEffect(() => {
+    getMovieList().then((result)=>{
+      setPM(result)
+    })
+  }, []);
+
+  const search = (q) => {
+    console.log(q);
+  };
   return (
     <div className="App">
       <header className="App-header">
-       <h1>LAYAR KACA 21</h1>
-          <input 
+        <h1>LAYAR KACA 21</h1>
+        <input
           type="search"
-          placeholder="Cari film" 
+          placeholder="Cari film"
           className="movie-search"
-          onChange={(e)=>search(e.target.value)}
-          />
-          <div className='movie-container'>
-            <div className='movie-wrap'>
-            <div className='movie-title'> FILM</div>
-            <img src='#' alt=''/>            
-            </div>
-         
-          </div>          
+          onChange={(target) => search(target.value)}
+        />
+        <div className="movie-container">
+          <div className="movie-wrap">
+            <div className="movie-title"> FILM</div>
+            <img src="#" alt="" />
+          </div>
+        </div>
       </header>
     </div>
   );
