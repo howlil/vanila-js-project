@@ -3,7 +3,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #ffffff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -27,16 +27,16 @@
 .movie-container {
   margin: 20px 0px;
   display: flex;
-  gap: 12px;
+  gap: 16px;
   justify-content: center;
   flex-wrap: wrap;
 }
 
 .movie-wrap {
 
-  color: #fbfcff;
-  background-color: rgb(6, 16, 90);
-  width: 350px;
+  color: #1a1a1a;
+  background-color: rgb(255, 255, 255);
+  width: 220px;
   overflow: hidden;
   border-radius: 12px;
   -webkit-border-radius: 12px;
@@ -48,35 +48,39 @@
   -moz-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.171);
 }
 
 
 .movie-wrap:hover {
-  scale: 1.01;
+  box-shadow: 0px 4px 20px rgba(4, 4, 4, 0.173);
+  scale: 1.005;
 }
 
-.img{
+.img {
   width: 100%;
+  
 }
 
 .movie-title {
-
+  margin-top: 10px;
   font-size: 20px;
   font-weight: bold;
+  line-height: 0.9;  
 }
 
-.movie-date{
+.movie-date {
   font-size: 16px;
 }
 
-.movie-rate{
-  padding: 8px ;
+.movie-rate {
+  padding: 8px;
   font-weight: bold;
   color: red;
 }
 
-.movie-body{
-  display:  flex;
+.movie-body {
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
 }

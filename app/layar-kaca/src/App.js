@@ -4,7 +4,7 @@ import { getMovieList, searchMovie } from "./utils/Api";
 
 
 function App() {
-
+  const [isNotif, setIsNotif] = useState(false)
   const [popularMovie,setPM] = useState([])
   useEffect(() => {
     getMovieList().then((result)=>{
@@ -40,11 +40,18 @@ function App() {
     setPM(result);
   }
   };
+
+  const notif = ()=>{
+    setIsNotif(!isNotif)
+    setTimeout(()=>{
+      setIsNotif(!isNotif)
+    },2000)
+  }
   
   return (
     <div className="App">
       <header className="App-header">
-    
+  
         <h1>LAYAR KACA 21</h1>
         <input
           type="search"
