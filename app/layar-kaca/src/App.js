@@ -29,9 +29,13 @@ function App() {
     })
   }
 
-  const search = (q) => {
-    console.log(q);
+  const search = async (q) => {
+    if (q.length > 3) {
+      const query = await searchMovie(q);
+      setPM(query.results);
+    }
   };
+  
   return (
     <div className="App">
       <header className="App-header">
@@ -40,7 +44,7 @@ function App() {
           type="search"
           placeholder="Cari film"
           className="movie-search"
-          onChange={(target) => search(target.value)}
+          onChange={(e) => search(e.target.value)}
         />
         <div className="movie-container">
          <PopulerMovieList/>
