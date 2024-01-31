@@ -14,7 +14,7 @@ body {
 .container {
     margin:  20px auto;
     overflow: hidden;
-    max-width:180px ;
+    width:250px ;
     background-color: #8C8C8C;
     border-radius: 8px;
     -webkit-border-radius: 8px;
@@ -23,9 +23,18 @@ body {
     -o-border-radius: 8px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.114), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
-
+nav{
+    background-color: rgb(26, 14, 194);
+    padding: 2px;
+}
+nav h1{
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
 .cont {
-    background-color: #404040;
+    background-color: rgb(29, 29, 29);
+    padding: 24px;
 
 }
 
@@ -61,15 +70,30 @@ body {
 
 input{
     color: rgb(255, 255, 255);
+    font-size: 16px;
     padding: 10px 10px;
     border: none;
     background: none;
 }
 
 .console {
+    font-size:32px ; 
     text-align: end;
     margin: auto 12px;
     height: 50px; 
     line-height: 50px; /* Center text vertically */
     overflow: hidden; /* Hide overflow */
 }
+
+@media only screen and (max-width: 600px) {
+    .console {
+        font-size:32px ; 
+    }
+    input{
+        font-size: 24px;
+        padding: 20px 10px;
+    }
+    .container {
+        width:350px ;
+    }
+  }
