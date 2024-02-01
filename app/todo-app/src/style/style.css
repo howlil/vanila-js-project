@@ -1,0 +1,89 @@
+
+body{
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav{
+    background-color: rgb(29, 29, 29);
+    padding:5px;
+    color: white;
+    text-align: center;
+}
+nav h1{
+    margin: 3px;
+    font-size: 20px;
+}
+
+.container-add{
+    margin: 20px auto;
+    width: 350px;
+    box-shadow: 0px 2px 16px rgba(128, 128, 128, 0.235);
+    padding: 16px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.container-add h3{
+    text-align: center;
+}
+
+
+form input{
+    width: 25em;
+    margin-bottom: 12px;
+    padding: 8px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border: 1px solid gray;
+}
+form button{
+    color: rgb(235, 235, 235);
+    border: none;
+    background: none;
+    padding: 6px 16px;
+    background-color: rgb(37, 37, 37);
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.container-todo, .container-done{
+    width: 350px;
+    margin: 20px auto;
+    padding: 16px 16px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    box-shadow: 0px 2px 16px rgba(128, 128, 128, 0.235);
+
+}
+.title{
+    text-align: center;
+    margin: 10px;
+}
+#wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid grey;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    padding: 8px;
+}
+.text p ,h4{
+    margin: 0px;
+}
