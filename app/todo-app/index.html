@@ -2,7 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="./src/style/style.css">
+    <link rel="stylesheet" href="./src/style/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo App</title>
   </head>
@@ -12,44 +16,63 @@
     </nav>
     <main>
       <div class="container-add">
-        <h3> Tambah Aktivitas</h3>
-        <form >
-            <input type="text" placeholder="aktivitas" id="input1" onchange="saveData(target.value)">
-            <input type="date" placeholder="tanggal" id="input2">
-            <button onclick="addToDisplay()">Submit</button>
+        <h3>Tambah Aktivitas</h3>
+        <form>
+          <input required type="text" placeholder="aktivitas" id="input1" />
+          <button type="button" onclick="addToDisplay()">Submit</button>
         </form>
       </div>
       <div class="container-todo">
-        <h4 class="title">Yang harus dilakukan </h4>
-        <div id="wrap">
-          <div class="text">
-            <h4>item</h4>
-            <p>tanggal</p>
-          </div>
-       
-          <div class="icon">
-            <i><input type="checkbox"></i>
-          </div>
+        <h4 class="title">DO</h4>
+        <div id="container">
+          
         </div>
       </div>
       <div class="container-done">
-        <h4 class="title">Yang sudah dilakukan </h4>
-        <div id="wrap">
+        <h4 class="title">Done</h4>
+        <div id="display">
+          <div class="wrap">
+            <div class="text">
+              <h5>aa</h5>
+            </div>
+            <div class="icon">
+              <i class="fas fa-sync"></i>
+              <!-- untuk ikon refresh -->
+              <i class="fas fa-trash"></i>
+            </div>
+          </div>
         </div>
       </div>
     </main>
-    <script >
-      const x = document.getElementById("input1").value;
-      const input2 = document.getElementById("input2").value;
+    <script>
 
-      const saveData =(x )=>{
-        addToDisplay(x);        
-      }
-      const addToDisplay =(x)=>{
-        const display = document.getElementsByClassName("content")
-        display.innerText = `${x}`
-      }
 
+      const addToDisplay = () => {
+        const aktivitas = document.getElementById("input1").value;
+        const newDiv = document.createElement("div");
+        newDiv.className = "text";
+        newDiv.innerHTML = `
+        <h5 class="text-display">${aktivitas}</h5>`;
+
+        const checkboxDiv = document.createElement("div");
+        checkboxDiv.className = "icon";
+        checkboxDiv.innerHTML = '  <i class="fas fa-check"></i>';
+
+        const wrapper = document.createElement("div");
+        wrapper.className = "wrap";
+        wrapper.appendChild(newDiv);
+        wrapper.appendChild(checkboxDiv);
+ 
+        if (aktivitas === "") {
+          alert("isi dulu bos");
+        } else {
+
+          document.getElementById("container").appendChild(wrapper);
+        
+        }
+        input.value = "";
+      };
+   
     </script>
   </body>
 </html>

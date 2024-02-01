@@ -1,4 +1,6 @@
-
+*{
+    box-sizing: border-box;
+}
 body{
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
@@ -17,7 +19,7 @@ nav h1{
 
 .container-add{
     margin: 20px auto;
-    width: 350px;
+    max-width: 350px;
     box-shadow: 0px 2px 16px rgba(128, 128, 128, 0.235);
     padding: 16px;
     border-radius: 8px;
@@ -33,7 +35,7 @@ nav h1{
 
 
 form input{
-    width: 25em;
+    width: 100%;
     margin-bottom: 12px;
     padding: 8px;
     border-radius: 8px;
@@ -46,8 +48,9 @@ form input{
 form button{
     color: rgb(235, 235, 235);
     border: none;
+    width: 100%;
     background: none;
-    padding: 6px 16px;
+    padding: 8px 16px;
     background-color: rgb(37, 37, 37);
     border-radius: 8px;
     -webkit-border-radius: 8px;
@@ -57,7 +60,7 @@ form button{
 }
 
 .container-todo, .container-done{
-    width: 350px;
+    max-width: 350px;
     margin: 20px auto;
     padding: 16px 16px;
     border-radius: 8px;
@@ -72,8 +75,9 @@ form button{
     text-align: center;
     margin: 10px;
 }
-#wrap{
+.wrap{
     display: flex;
+    margin-bottom: 5px;
     justify-content: space-between;
     align-items: center;
     border: 1px solid grey;
@@ -84,6 +88,15 @@ form button{
     -o-border-radius: 8px;
     padding: 8px;
 }
-.text p ,h4{
+.text h5{
     margin: 0px;
+}
+.fas{
+    margin-left: 10px;
+}
+.fa-trash{
+    color: red;
+}
+.fa-sync{
+    color: green;
 }
